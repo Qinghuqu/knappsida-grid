@@ -6,7 +6,7 @@ const xbutton = document.getElementById("X");
 
 delbutton.addEventListener("click", function(){
   delbutton.style="display: none";
-  alert.style="display: flex";
+  alert.style="display: grid";
 });
 ok.addEventListener("click", function(){
   window.open("http://hmpg.net", "_self");

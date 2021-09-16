@@ -23,8 +23,6 @@ main {
   transform: translate(-50%, -50%);
   text-align: center;
   border: 1px solid gray;
-  flex-direction: column;
-  justify-content: space-between;
   border-radius: 3%;
   overflow: hidden;
 }
