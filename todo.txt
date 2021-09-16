@@ -1,0 +1,4 @@
+Todo list:
+  dimmer
+  box shadow for dialogue
+  remove text selection on buttons
