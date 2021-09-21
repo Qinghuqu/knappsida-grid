@@ -1,0 +1,5 @@
+# Todo list:
+* [] convert flexbox to grid
+* [] dimmer
+* [] box shadow for dialogue
+* [] remove text selection on buttons
