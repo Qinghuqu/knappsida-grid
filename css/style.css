@@ -5,6 +5,11 @@ main {
   justify-content: center;
   align-items: center;
 }
+em {
+  font-style: normal;
+  font-weight: bold;
+  color: red;
+}
 .delete {
   border: 2px solid orange;
   font-family: sans-serif;
@@ -13,6 +18,8 @@ main {
 }
 .container {
   display: none;
+  grid-template-rows: repeat(3, auto);
+  
   position: fixed;
   width: 50vw;
   max-width: 400px;
@@ -26,21 +33,12 @@ main {
   border-radius: 3%;
   overflow: hidden;
 }
-.container table {
-  height: 100%;
-  border-collapse: collapse;
-  border: 0px;
-}
-tr {
-  display: flex;
-  height: 33%;
+.container>* {
   padding-left: 1em;
   padding-right: 1em;
-  justify-content: center;
-  align-items: center;
   font-family: 'Trebuchet MS', sans-serif;
 }
-tr:nth-child(1) {
+.container:nth-child(1) {
   background-color: white;
   border-bottom: 1px solid #d9d9d9;
   color: #24478f;
@@ -52,20 +50,12 @@ tr:nth-child(1) {
   font-weight: bolder;
   font-size: 1.5em;
 }
-tr:nth-child(2) {
+.container:nth-child(3) {
   background-color: #f2f2f2;
   border-bottom: 1px solid #d9d9d9;
 }
-em {
-  font-style: normal;
-  font-weight: bold;
-  color: red;
-}
-tr:nth-child(3) {
-  height: 34%;
-  background-color: #d9d9d9;
-}
 .okcancel {
+  background-color: #d9d9d9;
   display: flex;
   width: 100%;
   justify-content: center;
