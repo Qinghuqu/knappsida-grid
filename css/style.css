@@ -1,5 +1,5 @@
 main {
-  display: flex;
+  display: grid;
   width: 97vw;
   height: 98vh;
   justify-content: center;
@@ -18,8 +18,8 @@ em {
 }
 .container {
   display: none;
-  grid-template-rows: repeat(3, auto);
-  
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   position: fixed;
   width: 50vw;
   max-width: 400px;
@@ -37,36 +37,45 @@ em {
   padding-left: 1em;
   padding-right: 1em;
   font-family: 'Trebuchet MS', sans-serif;
-}
-.container:nth-child(1) {
-  background-color: white;
   border-bottom: 1px solid #d9d9d9;
+  vertical-align: middle;
+}
+.container h1 {
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+}
+.container>*:nth-child(1) {
+  background-color: white;
   color: #24478f;
 }
 .X {
   position: absolute;
-  left: 1em;
   color: lightgrey;
   font-weight: bolder;
   font-size: 1.5em;
+  border-bottom: 0;
 }
-.container:nth-child(3) {
+.container>*:nth-child(3) {
   background-color: #f2f2f2;
-  border-bottom: 1px solid #d9d9d9;
+  display: grid;
+  justify-content: center;
+  align-content: center;
 }
 .okcancel {
   background-color: #d9d9d9;
-  display: flex;
-  width: 100%;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  grid-template-rows: 1fr;
 }
 .ok, .cancel {
   color: white;
   border-radius: 5%;
   padding: 0.7em;
-  width: 40%;
-  margin: 3px;
+  margin: auto 5px auto 5px;
   transition: background-color 0.5s;
+  vertical-align: middle;
 }
 .ok {
   background-color: grey;
