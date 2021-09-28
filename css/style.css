@@ -6,10 +6,12 @@ main {
   align-items: center;
 }
 em {
+  display: inline;
   font-style: normal;
   font-weight: bold;
   color: red;
 }
+
 .delete {
   border: 2px solid orange;
   background-color: white;
@@ -20,12 +22,14 @@ em {
 .container {
   display: none;
   grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+
   position: fixed;
   width: 50vw;
   max-width: 400px;
-  height: 33vh;
-  max-height: 250px;
+  height: 28vh;
+  max-height: 220px;
+
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -33,6 +37,7 @@ em {
   border: 1px solid gray;
   border-radius: 3%;
   overflow: hidden;
+  box-shadow: -5px 5px 5px gray;
 }
 .container>* {
   padding-left: 1em;
@@ -42,11 +47,11 @@ em {
   vertical-align: middle;
 }
 .container h1 {
-  line-height: 1.5;
-  display: inline-block;
+  line-height: 100%;
   vertical-align: middle;
 }
 .container>*:nth-child(1) {
+  grid-column: 1 / span 2;
   background-color: white;
   color: #24478f;
 }
@@ -56,21 +61,22 @@ em {
   font-weight: bolder;
   font-size: 1.5em;
   border-bottom: 0;
+  top: 0.7em;
 }
 .container>*:nth-child(3) {
+  grid-column: 1 / span 2;
   background-color: #f2f2f2;
-  display: grid;
-  justify-content: center;
-  align-content: center;
+}
+.container>*:nth-child(3)>p {
+  line-height: 100%;
+  vertical-align: middle;
 }
 .okcancel {
+  grid-area: 3 / 1 / span 1 / span 2;
   background-color: #d9d9d9;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: space-between;
-  grid-template-rows: 1fr;
 }
 .ok, .cancel {
+  grid-row: 3 / span 1;
   color: white;
   border-radius: 5%;
   padding: 0.7em;
@@ -79,12 +85,14 @@ em {
   vertical-align: middle;
 }
 .ok {
+  grid-column: 1 / span 1;
   background-color: grey;
 }
 .ok:hover {
   background-color: silver;
 }
 .cancel {
+  grid-column: 2 / span 1;
   background-color: SteelBlue;
 }
 .cancel:hover {
@@ -99,4 +107,7 @@ em {
   left: 0px;
   background-color: black;
   opacity: 0.4;
+}
+.delete, .ok, .cancel, .X{
+  user-select: none;
 }
