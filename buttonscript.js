@@ -1,14 +1,16 @@
-const delbutton = document.getElementById("delete");
+const deleteButton = document.querySelector("#deleteButton");
 const alert = document.getElementById("container");
 const ok = document.getElementById("ok");
 const cancel = document.getElementById("cancel");
 const xbutton = document.getElementById("X");
 const dimmer = document.getElementById("dimmer");
 
-delbutton.addEventListener("click", function(){
-  delbutton.style="display: none";
+deleteButton.addEventListener("click", () =>
+{//function(){
+  deleteButton.style="display: none";
+  deleteButton.style.display = "none";
   alert.style="display: grid";
-  dimmer.style="display: block"
+  dimmer.style="display: block";
 });
 ok.addEventListener("click", function(){
   window.open("http://hmpg.net", "_self");

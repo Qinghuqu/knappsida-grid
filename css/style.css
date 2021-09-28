@@ -12,7 +12,7 @@ em {
   color: red;
 }
 
-.delete {
+.deleteButton {
   border: 2px solid orange;
   background-color: white;
   font-family: sans-serif;
