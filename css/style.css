@@ -1,11 +1,13 @@
-main {
+main
+{
   display: grid;
   width: 97vw;
   height: 98vh;
   justify-content: center;
   align-items: center;
 }
-em {
+em
+{
   display: inline;
   font-style: normal;
   font-weight: bold;
@@ -13,7 +15,8 @@ em {
 }
 
 
-.deleteButton {
+.deleteButton
+{
   border: 2px solid orange;
   background-color: white;
   font-family: sans-serif;
@@ -22,7 +25,8 @@ em {
 }
 
 
-.container {
+.container
+{
   display: none;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: 1fr;
@@ -42,24 +46,28 @@ em {
   overflow: hidden;
   box-shadow: -5px 5px 5px gray;
 }
-.container>* {
+.container>*
+{
   padding-left: 1em;
   padding-right: 1em;
   font-family: 'Trebuchet MS', sans-serif;
   border-bottom: 1px solid #d9d9d9;
   vertical-align: middle;
 }
-.container h1 {
+.container h1
+{
   line-height: 100%;
   vertical-align: middle;
 }
 
 
-.topRow {
+.topRow
+{
   background-color: white;
   color: #24478f;
 }
-.xButton {
+.xButton
+{
   position: absolute;
   top: 0.7em;
   left: 0.7em;
@@ -69,36 +77,43 @@ em {
 }
 
 
-.middleRow {
+.middleRow
+{
   background-color: #f2f2f2;
   line-height: 100%;
 }
-.middleRow>p {
+.middleRow>p
+{
   vertical-align: middle;
 }
 
 
-.bottomRow {
-  display: block;
+.bottomRow
+{
+  display: flex;
   background-color: #d9d9d9;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
 }
-.okButton, .cancelButton {
-  display: inline-block;
+.okButton, .cancelButton
+{
   width: 40%;
   border-radius: 5%;
   padding: 0.7em;
+  margin: 0 5px;
   color: white;
   transition: background-color 0.5s;
 }
-.okButton {
+.okButton
+{
   background-color: grey;
 }
-.okButton:hover {
+.okButton:hover
+{
   background-color: silver;
 }
-.cancelButton {
+.cancelButton
+{
   background-color: SteelBlue;
 }
 .cancelButton:hover {
@@ -106,7 +121,8 @@ em {
 }
 
 
-.dimmer {
+.dimmer
+{
   display: none;
   position: fixed;
   width: 100vw;
@@ -118,6 +134,7 @@ em {
 }
 
 
-.deleteButton, .okButton, .cancelButton, .xButton{
+.deleteButton, .okButton, .cancelButton, .xButton
+{
   user-select: none;
 }
