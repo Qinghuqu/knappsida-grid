@@ -12,6 +12,7 @@ em {
   color: red;
 }
 
+
 .deleteButton {
   border: 2px solid orange;
   background-color: white;
@@ -19,10 +20,12 @@ em {
   padding: 0.5em;
   border-radius: 10%;
 }
+
+
 .container {
   display: none;
   grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 
   position: fixed;
   width: 50vw;
@@ -50,54 +53,59 @@ em {
   line-height: 100%;
   vertical-align: middle;
 }
-.container>*:nth-child(1) {
-  grid-column: 1 / span 2;
+
+
+.topRow {
   background-color: white;
   color: #24478f;
 }
-.X {
+.xButton {
   position: absolute;
+  top: 0.7em;
+  left: 0.7em;
   color: lightgrey;
   font-weight: bolder;
   font-size: 1.5em;
-  border-bottom: 0;
-  top: 0.7em;
 }
-.container>*:nth-child(3) {
-  grid-column: 1 / span 2;
+
+
+.middleRow {
   background-color: #f2f2f2;
-}
-.container>*:nth-child(3)>p {
   line-height: 100%;
+}
+.middleRow>p {
   vertical-align: middle;
 }
-.okcancel {
-  grid-area: 3 / 1 / span 1 / span 2;
+
+
+.bottomRow {
+  display: block;
   background-color: #d9d9d9;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
-.ok, .cancel {
-  grid-row: 3 / span 1;
-  color: white;
+.okButton, .cancelButton {
+  display: inline-block;
+  width: 40%;
   border-radius: 5%;
   padding: 0.7em;
-  margin: auto 5px auto 5px;
+  color: white;
   transition: background-color 0.5s;
-  vertical-align: middle;
 }
-.ok {
-  grid-column: 1 / span 1;
+.okButton {
   background-color: grey;
 }
-.ok:hover {
+.okButton:hover {
   background-color: silver;
 }
-.cancel {
-  grid-column: 2 / span 1;
+.cancelButton {
   background-color: SteelBlue;
 }
-.cancel:hover {
+.cancelButton:hover {
   background-color: SkyBlue;
 }
+
+
 .dimmer {
   display: none;
   position: fixed;
@@ -108,6 +116,8 @@ em {
   background-color: black;
   opacity: 0.4;
 }
-.delete, .ok, .cancel, .X{
+
+
+.deleteButton, .okButton, .cancelButton, .xButton{
   user-select: none;
 }
