@@ -1,17 +1,16 @@
-main
+*
+{
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+
+body
 {
   display: grid;
   width: 97vw;
   height: 98vh;
   justify-content: center;
   align-items: center;
-}
-em
-{
-  display: inline;
-  font-style: normal;
-  font-weight: bold;
-  color: red;
 }
 
 
@@ -20,7 +19,7 @@ em
   border: 2px solid orange;
   background-color: white;
   font-family: sans-serif;
-  padding: 0.5em;
+  padding: 0.5rem;
   border-radius: 10%;
 }
 
@@ -45,19 +44,16 @@ em
   border-radius: 3%;
   overflow: hidden;
   box-shadow: -5px 5px 5px gray;
+
 }
-.container>*
+
+
+.topRow, .middleRow, .bottomRow
 {
-  padding-left: 1em;
-  padding-right: 1em;
-  font-family: 'Trebuchet MS', sans-serif;
-  border-bottom: 1px solid #d9d9d9;
-  vertical-align: middle;
-}
-.container h1
-{
-  line-height: 100%;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 
@@ -65,41 +61,40 @@ em
 {
   background-color: white;
   color: #24478f;
+  border-bottom: 1px solid #d9d9d9;
 }
 .xButton
 {
   position: absolute;
-  top: 0.7em;
-  left: 0.7em;
+  top: 0.7rem;
+  left: 0.7rem;
   color: lightgrey;
   font-weight: bolder;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 
 .middleRow
 {
   background-color: #f2f2f2;
-  line-height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-bottom: 1px solid #d9d9d9;
 }
-.middleRow>p
-{
-  vertical-align: middle;
+.warning {
+  font-weight: bold;
+  color: red;
 }
-
 
 .bottomRow
 {
-  display: flex;
   background-color: #d9d9d9;
-  justify-content: center;
-  align-items: center;
 }
 .okButton, .cancelButton
 {
   width: 40%;
   border-radius: 5%;
-  padding: 0.7em;
+  padding: 0.7rem;
   margin: 0 5px;
   color: white;
   transition: background-color 0.5s;
