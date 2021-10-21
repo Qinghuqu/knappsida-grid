@@ -111,7 +111,8 @@ body
 {
   background-color: SteelBlue;
 }
-.cancelButton:hover {
+.cancelButton:hover
+{
   background-color: SkyBlue;
 }
 
